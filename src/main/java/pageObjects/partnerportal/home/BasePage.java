@@ -1,7 +1,6 @@
 package pageObjects.partnerportal.home;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -184,16 +183,6 @@ public class BasePage {
 
 		Constant.PageName = PageName;
 		boolean text = false;
-		String tcStepDesc = "Check visibility of locator '" + locator + "' in Page '" + PageName + "'";
-
-		// ***** Test Steps - Results if element is NOT null *****
-		String tcStepExpectedResultPass = "'" + locator + "' should be visible on the Application";
-		String tcStepActualResultPass = "'" + locator + "' is visbile on the page '" + PageName + "'";
-
-		// ***** Test Step - Results if element is null *****
-		String tcStepExpectedResultFail = "'" + locator + "' should be visible on the Application";
-		String tcStepActualResultFail = "'" + locator + "' is Not visbile on the page '" + PageName + "'";
-		
 		return text;
 	}
 	
@@ -217,7 +206,7 @@ public class BasePage {
 	
 	public static void switchHandlesToNewWindow() {
 		System.out.println("Switching handles to new tab...");
-		String winHandleBefore = driver.getWindowHandle();
+		driver.getWindowHandle();
 		for(String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
@@ -273,7 +262,7 @@ public class BasePage {
 	}
 	
 	public static String getTextFromFirstContract() {
-		WebElement wait1 = new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//html/body/app-root/ng-component/residential-main-tabs/main/h2/span[1]")));
+		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//html/body/app-root/ng-component/residential-main-tabs/main/h2/span[1]")));
 		String firstContractText = 
 				driver.findElement(By.xpath("//html/body/app-root/ng-component/residential-main-tabs/main/div[2]/div[2]/div/section[2]/agreements-list/table/tbody/tr/td[2]/a/div"))
 						.getText();
@@ -283,12 +272,12 @@ public class BasePage {
 	public void sleepRefreshPage() throws Exception {
 		Thread.sleep(7000);
 		driver.navigate().refresh();
-		Boolean wait = new WebDriverWait(driver, 120)
+		new WebDriverWait(driver, 120)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(text(),'Processing...')]")));
 		driver.navigate().refresh();
 		Thread.sleep(7000);
 		driver.navigate().refresh();
-		Boolean wait1 = new WebDriverWait(driver, 120)
+		new WebDriverWait(driver, 120)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(text(),'Processing...')]")));
 	}
 }
