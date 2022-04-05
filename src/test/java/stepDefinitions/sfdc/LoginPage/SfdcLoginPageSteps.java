@@ -20,9 +20,5 @@ public class SfdcLoginPageSteps {
 		sfdcloginPage.loginSfdcQA(Constant.sfdcUsernameQA, Constant.sfdcPassword);
 	}
 	
-	@Then("^User ends the test scenario$")
-	public void user_ends_the_test_scenario() throws Throwable {
-		BasePage.RunListEndFlag();
-	}
 	
 }

@@ -9,7 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features= {
 				
-				"src/main/resources/features/spwr/CustomerCare/ST_01_CSR_Case_Creation.feature"
+				"src/main/resources/features/spwr/CustomerCare/ST_02_TSE_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_01_CSR_Case_Creation.feature"
 				//"src/main/resources/features/spwr/OperationsRegression/TS_01_Helix_Regression_Testing.feature"
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_01_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Cash.feature",
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_02_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Loan.feature",

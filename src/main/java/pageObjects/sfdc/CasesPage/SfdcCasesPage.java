@@ -20,6 +20,9 @@ public class SfdcCasesPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"p3\"]/option[2]")
 	WebElement CSROPTION;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"p3\"]/option[10]")
+	WebElement TSEOPTION;
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"bottomButtonRow\"]/input[1]")
 	WebElement CONTINUEBTN;
 	
@@ -86,8 +89,26 @@ public class SfdcCasesPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"00N80000004Ynfh\"]/option[4]")
 	WebElement BOSCOPTION;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cas5\"]")
+	WebElement TYPEDRPDWN;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cas5\"]/option[2]")
+	WebElement INQOPTION;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"00N80000005Dk90\"]/option[10]")
+	WebElement SYSISSUEOPTION;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"CF00N80000005FTXE\"]")
+	WebElement PRODSELTXTBOX;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"new\"]/div/div[3]/div/div[2]/table/tbody/tr[3]/th/a")
+	WebElement HVOPTION;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cas22\"]")
+	WebElement SENDNOTIFTICKBOX;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"CF00N2T0000061akA\"]")
+	WebElement ERRORCODETXTBOX;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"topButtonRow\"]/input[1]")
 	WebElement SAVECASEBTN;
@@ -158,4 +179,66 @@ public class SfdcCasesPage extends BasePage {
 		
 	}
 
+	public void createTSECase() throws Exception {
+		waitForVisibleElement(driver, NEWBTN);
+		click(NEWBTN, "NEWBTN");
+		
+		waitForVisibleElement(driver, RECORDTYPE);
+		click(RECORDTYPE, "RECORDTYPE");
+		
+		waitForVisibleElement(driver, TSEOPTION);
+		click(TSEOPTION, "TSEOPTION");
+		
+		waitForVisibleElement(driver, CONTINUEBTN);
+		click(CONTINUEBTN, "CONTINUEBTN");
+		
+		//CASE INFORMATION SECTION
+		
+		waitForVisibleElement(driver, ACCNAMETXTBOX);
+		click(ACCNAMETXTBOX, "ACCNAMETXTBOX");
+		enterText(ACCNAMETXTBOX, "ACCNAMETXTBOX", "Gabi Solar");
+		
+		enterText(PARTNERNAMETXTBOX, "PARTNERNAMETXTBOX", "Gabi Solar");
+		
+		enterText(SRVCONTACTTXTBOX, "SRVCONTACTTXTBOX", "Bad Pritt");
+		waitForVisibleElement(driver, BADPRITTOPTION);
+		click(BADPRITTOPTION, "BADPRITTOPTION");
+		
+		click(RESOWNERDRPDWN, "RESOWNERDRPDWN");
+		click(ACCPAYABLEOPTION, "ACCPAYABLEOPTION");
+		click(CHANNELDRPDWN, "CHANNELDRPDWN");
+		click(LIGHTCOMOPTION, "LIGHTCOMOPTION");
+		click(FCRDRPDWN, "FCRDRPDWN");
+		click(YESFCROPTION, "YESFCROPTION");
+		click(SLADRPDWN, "SLADRPDWN");
+		click(ONEBSNSDAYOPTION, "ONEBSNSDAYOPTION");
+		
+		//Case Details Section
+		
+		click(TYPEDRPDWN, "TYPEDRPDWN");
+		click(INQOPTION, "INQOPTION");
+		
+		click(SUBCATDRPDWN, "SUBCATDRPDWN");
+		click(SYSISSUEOPTION, "SYSISSUEOPTION");
+		
+		click(SUBJTXTBOX, "SUBJTXTBOX");
+		enterText(SUBJTXTBOX, "SUBJTXTBOX", "Automation - TSE Smoke Test");
+		
+		
+		//Product Information Section
+		
+		click(PRODSELTXTBOX, "PRODSELTXTBOX");
+		enterText(PRODSELTXTBOX, "PRODSELTXTBOX", "7000HV");
+		
+		
+		click(CASEDIFFDRPDWN, "CASEDIFFDRPDWN");
+		click(PRODRELOPTION, "PRODRELOPTION");
+		
+		click(ERRORCODETXTBOX, "ERRORCODETXTBOX");
+		enterText(ERRORCODETXTBOX, "ERRORCODETXTBOX", "FC - 16");
+		
+		
+		click(SENDNOTIFTICKBOX, "SENDNOTIFTICKBOX");
+		click(SAVECASEBTN, "SAVECASEBTN");
+	}
 }
