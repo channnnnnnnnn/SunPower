@@ -17,6 +17,8 @@ public class SfdcHomePage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"bodyCell\"]/div[3]/div[2]/table/tbody/tr[32]/td[1]/a")
 	WebElement CASESBTN; 
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"hotlist\"]/table/tbody/tr/td[2]/input")
+	WebElement NEWBTN;
 	
 	public SfdcHomePage() {
 		PageFactory.initElements(driver, this);
@@ -29,5 +31,18 @@ public class SfdcHomePage extends BasePage {
 		waitForVisibleElement(driver, ALLTABBTN);
 		click(CASESBTN, "CASESBTN");
 	}
+	
+	
+	public void navigateToCreateCase() throws Exception {
+		waitForVisibleElement(driver, ALLTABBTN);
+		click(ALLTABBTN, "ALLTABBTN");
+		
+		waitForVisibleElement(driver, ALLTABBTN);
+		click(CASESBTN, "CASESBTN");
+		
+		waitForVisibleElement(driver, NEWBTN);
+		click(NEWBTN, "NEWBTN");
+	}
 
+	
 }

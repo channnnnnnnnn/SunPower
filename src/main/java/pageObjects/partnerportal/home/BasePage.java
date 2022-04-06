@@ -85,7 +85,7 @@ public class BasePage {
 	
 	public static void RunListEndFlag() {
 		Constant.isEndStepReached = true;
-		driver.quit();
+	
 	}
 	
 	public static void waitElementToLoad(WebElement element) {

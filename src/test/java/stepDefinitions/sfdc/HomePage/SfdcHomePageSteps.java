@@ -20,4 +20,9 @@ public class SfdcHomePageSteps {
 		sfdchomepage.navigateToCases();
 	}
 	
+	@Then("^User navigates to create a Case$")
+	public void user_navigates_to_create_case() throws Exception {
+		SfdcHomePage sfdchomepage = new SfdcHomePage();
+		sfdchomepage.navigateToCreateCase();
+	}
 }

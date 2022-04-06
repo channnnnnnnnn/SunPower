@@ -98,6 +98,9 @@
 			<version>2.22.2</version>
 			<configuration>
 				<testFailureIgnore>true</testFailureIgnore>
+				<includes>
+					<include></include> 
+				</includes>
 			</configuration>
 		</plugin>
 		

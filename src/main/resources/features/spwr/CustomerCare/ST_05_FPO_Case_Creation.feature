@@ -5,11 +5,11 @@ Feature: Smoke Test Case Creation
 #Date Modified: 
 #Last Modified by:
 
-Scenario: ST_02 TSE Case Creation
+Scenario: ST_05 FPO Case Creation
 
 #QA - Start New Commercial Customer Account creation
 Given User navigates to Sales Force using "Chrome" browser
 When User logs in SFDC QA
-Then User creates new TSE Case
+Then User creates new FPO Case
 Then User ends the test scenario
 

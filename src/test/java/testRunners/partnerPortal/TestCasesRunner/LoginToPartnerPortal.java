@@ -9,7 +9,12 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features= {
 				
-				"src/main/resources/features/spwr/CustomerCare/ST_02_TSE_Case_Creation.feature"
+				"src/main/resources/features/spwr/CustomerCare/ST_01_All_Case_Creation_Smoke_Test.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_06_Marketing_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_05_FPO_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_04_PAM_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_03_Sys_Des_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/ST_02_TSE_Case_Creation.feature"
 				//"src/main/resources/features/spwr/CustomerCare/ST_01_CSR_Case_Creation.feature"
 				//"src/main/resources/features/spwr/OperationsRegression/TS_01_Helix_Regression_Testing.feature"
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_01_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Cash.feature",
