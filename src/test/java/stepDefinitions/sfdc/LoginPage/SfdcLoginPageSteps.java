@@ -20,5 +20,9 @@ public class SfdcLoginPageSteps {
 		sfdcloginPage.loginSfdcQA(Constant.sfdcUsernameQA, Constant.sfdcPassword);
 	}
 	
-	
+	@When("^User logs in SFDC UAT$")
+	public void user_logs_in_as_an_indirect_partner_in_uat() throws Exception {
+		SfdcLoginPage sfdcloginPage = new SfdcLoginPage();
+		sfdcloginPage.loginSfdcUAT(Constant.sfdcUsernameUAT, Constant.sfdcPassword);
+	}
 }

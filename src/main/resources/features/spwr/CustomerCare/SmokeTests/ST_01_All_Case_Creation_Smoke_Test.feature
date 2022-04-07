@@ -5,9 +5,9 @@ Feature: Smoke Test Case Creation
 #Date Modified: 
 #Last Modified by:
 
-Scenario: ST_01 CSR Case Creation
+Scenario: ST_01 Smoke Test All Cases Creation
 
-#QA - Start New Commercial Customer Account creation
+#Can log in to QA or UAT
 Given User navigates to Sales Force using "Chrome" browser
 When User logs in SFDC QA
 Then User creates new TSE Case

@@ -9,14 +9,18 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features= {
 				
-				"src/main/resources/features/spwr/CustomerCare/ST_01_All_Case_Creation_Smoke_Test.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_06_Marketing_Case_Creation.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_05_FPO_Case_Creation.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_04_PAM_Case_Creation.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_03_Sys_Des_Case_Creation.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_02_TSE_Case_Creation.feature"
-				//"src/main/resources/features/spwr/CustomerCare/ST_01_CSR_Case_Creation.feature"
-				//"src/main/resources/features/spwr/OperationsRegression/TS_01_Helix_Regression_Testing.feature"
+				//"src/main/resources/features/spwr/CustomerCare/RegressionTests/CaseManagement/RT_01_PSR_Update_SLA_picklist.feature"
+				"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_01_All_Case_Creation_Smoke_Test.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_08_Sys_Des_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_07_PSR_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_06_Marketing_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_05_FPO_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_04_PAM_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_03_CSR_Case_Creation.feature"
+				//"src/main/resources/features/spwr/CustomerCare/SmokeTests/ST_02_TSE_Case_Creation.feature"
+				
+	
+			
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_01_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Cash.feature",
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_02_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Loan.feature",
 				//"src/main/resources/features/spwr/TestCaseFeatures/TS_03_Partner_Portal_End_to_End_Account_to_Manual_Quoting_Lease.feature",

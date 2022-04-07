@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import pageObjects.partnerportal.home.BasePage;
 
 public class SfdcCasesPage extends BasePage {
@@ -203,7 +205,19 @@ public class SfdcCasesPage extends BasePage {
 	//*[@id="Case_Tab"]/a
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Case_Tab\"]")
 	WebElement CASESTAB;
+	
+	@FindBy(how = How.XPATH, using = "	//*[@id=\"00N34000005kOm8\"]/option[3]")
+	WebElement THREEDAYSOPT;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"00N34000005kOm8\"]/option[5]")
+	WebElement SIXDAYSOPT;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cas11\"]")
+	WebElement CASORGDRPDWN;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cas11\"]/option[6]")
+	WebElement INTOPT;
+	
 	public SfdcCasesPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -585,13 +599,18 @@ public class SfdcCasesPage extends BasePage {
 		waitForVisibleElement(driver, RECORDTYPE);
 		click(RECORDTYPE, "RECORDTYPE");
 		
-		waitForVisibleElement(driver, MRKTOPT);
-		click(MRKTOPT, "MRKTOPT");
+		waitForVisibleElement(driver, PSROPT);
+		click(PSROPT, "PSROPT");
 		
 		waitForVisibleElement(driver, CONTINUEBTN);
 		click(CONTINUEBTN, "CONTINUEBTN");
 		
 		//Case Information Section
+		
+		
+		waitForVisibleElement(driver, CASORGDRPDWN);
+		click(CASORGDRPDWN, "CASORGDRPDWN");
+		click(INTOPT, "INTOPT");
 		
 		waitForVisibleElement(driver, ACCNAMETXTBOX);
 		click(ACCNAMETXTBOX, "ACCNAMETXTBOX");
@@ -603,6 +622,9 @@ public class SfdcCasesPage extends BasePage {
 		waitForVisibleElement(driver, BADPRITTOPT);
 		click(BADPRITTOPT, "BADPRITTOPT");
 		
+		click(RESOWNERTYPEDRPDWN, "RESOWNERTYPEDRPDWN");
+		click(GBFSOPT, "GBFSOPT");
+		
 		click(RESOWNERDRPDWN, "RESOWNERDRPDWN");
 		click(ACCPAYABLEOPT, "ACCPAYABLEOPT");
 		
@@ -610,7 +632,12 @@ public class SfdcCasesPage extends BasePage {
 		click(LIGHTCOMOPT, "LIGHTCOMOPT");
 		
 		click(SLADRPDWN, "SLADRPDWN");
-		click(ONEBSNSDAYOPT, "ONEBSNSDAYOPT");
+		Assert.assertEquals(THREEDAYSOPT.getText(), "3 business days");
+		System.out.println("3 business days option found");
+
+		Assert.assertEquals(SIXDAYSOPT.getText(), "6 business days");
+		System.out.println("6 business days option found");
+		click(THREEDAYSOPT, "THREEDAYSOPT");
 		
 		//Case Details Section
 		
@@ -627,6 +654,9 @@ public class SfdcCasesPage extends BasePage {
 		
 		click(CASEDIFFDRPDWN, "CASEDIFFDRPDWN");
 		click(PRODRELOPT, "PRODRELOPT");
+		
+		click(LOCDRPDWN, "LOCDRPDWN");
+		click(BOSCOPT, "BOSCOPT");
 		
 		click(SAVECASEBTN, "SAVECASEBTN");
 		

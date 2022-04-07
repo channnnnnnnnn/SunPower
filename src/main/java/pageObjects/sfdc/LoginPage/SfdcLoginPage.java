@@ -47,4 +47,11 @@ public class SfdcLoginPage extends BasePage {
 		enterText(PASSWORDTXTBOX, "PASSWORDTXTBOX", Constant.sfdcPassword);
 		click(LOGINBTN, "LOGINBTN");
 	}	
+	
+	public void loginSfdcUAT(String username, String password) throws Exception {
+		waitForVisibleElement(driver, USERNAMETXTBOX);
+		enterText(USERNAMETXTBOX, "USERNAMETXTBOX", Constant.sfdcUsernameUAT);
+		enterText(PASSWORDTXTBOX, "PASSWORDTXTBOX", Constant.sfdcPassword);
+		click(LOGINBTN, "LOGINBTN");
+	}	
 }

@@ -25,4 +25,17 @@ public class SfdcHomePageSteps {
 		SfdcHomePage sfdchomepage = new SfdcHomePage();
 		sfdchomepage.navigateToCreateCase();
 	}
+	
+	@Then("^User logs in as System Administrator profile$")
+	public void user_logs_in_as_Sys_Admin() throws Exception {
+		SfdcHomePage sfdchomepage = new SfdcHomePage();
+		sfdchomepage.logInAsSysAdmin();
+	}
+	
+
+	@Then("^User navigates to Setup$")
+	public void user_navigates_to_Setup() throws Exception {
+		SfdcHomePage sfdchomepage = new SfdcHomePage();
+		sfdchomepage.navigateToSetup();
+	}
 }

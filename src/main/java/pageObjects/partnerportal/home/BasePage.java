@@ -199,6 +199,12 @@ public class BasePage {
 		js.executeScript("window.scrollBy(0,500)");
 	}
 	
+	public static void scrollPageDownBy1500() {
+		System.out.println("Scrolling page down by 900px for viewport...");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1500)");
+	}
+	
 	public static void scrollPageUp() {
 		System.out.println("Scrolling page up for viewport...");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
